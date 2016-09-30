@@ -39,6 +39,9 @@ class Ui_AcercaDe(object):
         self.label = QtWidgets.QLabel(AcercaDe)
         self.label.setObjectName("label")
         self.verticalLayout.addWidget(self.label)
+        self.label_6 = QtWidgets.QLabel(AcercaDe)
+        self.label_6.setObjectName("label_6")
+        self.verticalLayout.addWidget(self.label_6)
 
         self.retranslateUi(AcercaDe)
         QtCore.QMetaObject.connectSlotsByName(AcercaDe)
@@ -49,8 +52,9 @@ class Ui_AcercaDe(object):
         self.label_2.setText(_translate("AcercaDe", "Programa de administracion de Stock"))
         self.label_3.setText(_translate("AcercaDe", "Version: 0.1"))
         self.label_5.setText(_translate("AcercaDe", "Marzo 2016"))
-        self.label_4.setText(_translate("AcercaDe", "Python 3.5.1 + PyQt4 + SQLite"))
+        self.label_4.setText(_translate("AcercaDe", "Python 3.5.1 + PyQt5 + SQLite"))
         self.label.setText(_translate("AcercaDe", "Autor: Matias Daniel Vico"))
+        self.label_6.setText(_translate("AcercaDe", "e-mail: matias.daniel.vico@gmail.com"))
 
 
 if __name__ == "__main__":

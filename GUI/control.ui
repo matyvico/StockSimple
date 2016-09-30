@@ -6,23 +6,140 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>230</width>
-    <height>250</height>
+    <width>545</width>
+    <height>635</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Control de Stock</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <item>
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>Fechas de vencimiento próximas:</string>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="3" column="0">
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>Fechas de vencimiento próximas</string>
      </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QTableWidget" name="tableVencimiento">
+        <column>
+         <property name="text">
+          <string>Código</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Producto</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Cantidad</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Fecha de vencimiento</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </item>
-   <item>
-    <widget class="QTableView" name="tableView"/>
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Resumen</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QTableWidget" name="tableResumen">
+        <column>
+         <property name="text">
+          <string>Vendedor</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Total</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Controlado</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>Historial de ventas</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QTableWidget" name="tableRegistroVenta">
+        <column>
+         <property name="text">
+          <string>Vendedor</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Producto</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Cantidad</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Precio unitario</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Total</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QGroupBox" name="groupBox_4">
+     <property name="title">
+      <string>Stock bajo</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QTableWidget" name="tableStockBajo">
+        <column>
+         <property name="text">
+          <string>Código</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Producto</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Cantidad</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </item>
   </layout>
  </widget>

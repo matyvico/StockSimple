@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_AgregarStock(object):
     def setupUi(self, AgregarStock):
         AgregarStock.setObjectName("AgregarStock")
-        AgregarStock.resize(270, 272)
+        AgregarStock.resize(284, 274)
         self.formLayout = QtWidgets.QFormLayout(AgregarStock)
         self.formLayout.setFieldGrowthPolicy(QtWidgets.QFormLayout.AllNonFixedFieldsGrow)
         self.formLayout.setObjectName("formLayout")
@@ -55,9 +55,9 @@ class Ui_AgregarStock(object):
         self.spinPrecio.setSingleStep(0.1)
         self.spinPrecio.setObjectName("spinPrecio")
         self.formLayout.setWidget(4, QtWidgets.QFormLayout.FieldRole, self.spinPrecio)
-        self.botonAgregar = QtWidgets.QPushButton(AgregarStock)
-        self.botonAgregar.setObjectName("botonAgregar")
-        self.formLayout.setWidget(6, QtWidgets.QFormLayout.FieldRole, self.botonAgregar)
+        self.pushAgregarStock = QtWidgets.QPushButton(AgregarStock)
+        self.pushAgregarStock.setObjectName("pushAgregarStock")
+        self.formLayout.setWidget(6, QtWidgets.QFormLayout.FieldRole, self.pushAgregarStock)
         self.dateVencimiento = QtWidgets.QDateEdit(AgregarStock)
         self.dateVencimiento.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.dateVencimiento.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
@@ -76,7 +76,7 @@ class Ui_AgregarStock(object):
         AgregarStock.setTabOrder(self.comboMarca, self.lineProducto)
         AgregarStock.setTabOrder(self.lineProducto, self.spinPrecio)
         AgregarStock.setTabOrder(self.spinPrecio, self.dateVencimiento)
-        AgregarStock.setTabOrder(self.dateVencimiento, self.botonAgregar)
+        AgregarStock.setTabOrder(self.dateVencimiento, self.pushAgregarStock)
 
     def retranslateUi(self, AgregarStock):
         _translate = QtCore.QCoreApplication.translate
@@ -87,7 +87,7 @@ class Ui_AgregarStock(object):
         self.label_3.setText(_translate("AgregarStock", "Producto:"))
         self.label_4.setText(_translate("AgregarStock", "Precio unitario:"))
         self.spinPrecio.setPrefix(_translate("AgregarStock", "$ "))
-        self.botonAgregar.setText(_translate("AgregarStock", "Agregar"))
+        self.pushAgregarStock.setText(_translate("AgregarStock", "Agregar"))
         self.dateVencimiento.setDisplayFormat(_translate("AgregarStock", "dd/MM/yyyy"))
         self.label_6.setText(_translate("AgregarStock", "Fecha de vencimiento:"))
 

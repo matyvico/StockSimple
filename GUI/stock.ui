@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>647</width>
-    <height>354</height>
+    <width>757</width>
+    <height>492</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,6 +15,13 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="2">
+     <widget class="QPushButton" name="pushConsultar">
+      <property name="text">
+       <string>Consultar</string>
+      </property>
+     </widget>
+    </item>
     <item row="1" column="0">
      <widget class="QLabel" name="label">
       <property name="sizePolicy">
@@ -28,15 +35,84 @@
       </property>
      </widget>
     </item>
-    <item row="1" column="2">
-     <widget class="QPushButton" name="botonConsultar">
+    <item row="3" column="0" colspan="4">
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="title">
+       <string>Venta</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Código</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QComboBox" name="comboBox"/>
+       </item>
+       <item row="0" column="5">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>Vendedor</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="4">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Total</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QComboBox" name="comboBox_4"/>
+       </item>
+       <item row="0" column="3">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Cantidad</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="4">
+        <widget class="QComboBox" name="comboBox_5"/>
+       </item>
+       <item row="1" column="5">
+        <widget class="QComboBox" name="comboBox_6"/>
+       </item>
+       <item row="1" column="2">
+        <widget class="QComboBox" name="comboBox_3"/>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Producto</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Precio unitario</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="comboBox_2"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QPushButton" name="pushBorrar">
       <property name="text">
-       <string>Consultar</string>
+       <string>Borrar consulta</string>
       </property>
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QLineEdit" name="textoCodigo">
+     <widget class="QLineEdit" name="lineCodigo">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
         <horstretch>0</horstretch>
@@ -45,15 +121,19 @@
       </property>
      </widget>
     </item>
-    <item row="1" column="3">
-     <widget class="QPushButton" name="botonBorrar">
-      <property name="text">
-       <string>Borrar consulta</string>
+    <item row="4" column="0" colspan="4">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Historial de ventas</string>
       </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QTableWidget" name="tableStock"/>
+       </item>
+      </layout>
+      <zorder>tableStock</zorder>
+      <zorder>tableStock</zorder>
      </widget>
-    </item>
-    <item row="2" column="0" colspan="4">
-     <widget class="QTableWidget" name="tableStock"/>
     </item>
    </layout>
   </widget>
@@ -62,8 +142,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>647</width>
-     <height>28</height>
+     <width>757</width>
+     <height>30</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuArchivo">
@@ -165,11 +245,6 @@
    </property>
   </action>
  </widget>
- <tabstops>
-  <tabstop>textoCodigo</tabstop>
-  <tabstop>botonConsultar</tabstop>
-  <tabstop>botonBorrar</tabstop>
- </tabstops>
  <resources/>
  <connections/>
 </ui>

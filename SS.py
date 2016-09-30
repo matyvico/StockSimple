@@ -33,8 +33,8 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
 
         self.ui.menuArchivo.triggered.connect(self.cerrarAplicacion)
-        self.ui.botonConsultar.clicked.connect(self.consultaBD)
-        self.ui.botonBorrar.clicked.connect(self.eliminarBD)
+        self.ui.pushConsultar.clicked.connect(self.consultaBD)
+        self.ui.pushBorrar.clicked.connect(self.eliminarBD)
         self.ui.actionModificar.triggered.connect(self.Agregar)
         self.ui.actionControl.triggered.connect(self.Control)
         self.ui.actionMarcass.triggered.connect(self.Marca)
@@ -46,7 +46,7 @@ class MainWindow(QMainWindow):
 
     def consultaBD(self):
         """Lectura de la base de datos."""
-        codigo = int(self.ui.textoCodigo.text())
+        codigo = int(self.ui.lineCodigo.text())
         if codigo == 0:
             c.execute("SELECT cantidad, producto, marca, precio FROM stock")
         else:
@@ -98,7 +98,7 @@ class MainWindow(QMainWindow):
 
     def eliminarBD(self):
         """Funcion para eliminar elementos de la base de datos."""
-        codigo = int(self.ui.textoCodigo.text())
+        codigo = int(self.ui.lineCodigo.text())
         c.execute("DELETE FROM stock WHERE codigo = ?", (codigo,))
         conn.commit()
 
@@ -141,7 +141,7 @@ class AgregarStock(QDialog):
         self.ui = Ui_AgregarStock()
         self.ui.setupUi(self)
 
-        self.ui.botonAgregar.clicked.connect(self.agregarBD)
+        self.ui.pushAgregarStock.clicked.connect(self.agregarBD)
 
     def agregarBD(self):
         """Agregado dinamico de la tabla de stock."""
@@ -168,7 +168,7 @@ class MarcasStock(QDialog):
         self.ui = Ui_MarcasStock()
         self.ui.setupUi(self)
 
-        self.ui.botonAgregar.clicked.connect(self.agregarMarcaBD)
+        self.ui.pushAgregarMarca.clicked.connect(self.agregarMarcaBD)
 
     def agregarMarcaBD(self):
         pass

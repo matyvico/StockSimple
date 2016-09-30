@@ -61,7 +61,7 @@
    <item>
     <widget class="QLabel" name="label_4">
      <property name="text">
-      <string>Python 3.5.1 + PyQt4 + SQLite</string>
+      <string>Python 3.5.1 + PyQt5 + SQLite</string>
      </property>
     </widget>
    </item>
@@ -69,6 +69,13 @@
     <widget class="QLabel" name="label">
      <property name="text">
       <string>Autor: Matias Daniel Vico</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>e-mail: matias.daniel.vico@gmail.com</string>
      </property>
     </widget>
    </item>
