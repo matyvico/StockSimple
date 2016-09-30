@@ -1,0 +1,1 @@
+- Una consulta con código vacío devuelve error
