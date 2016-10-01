@@ -128,11 +128,30 @@
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QTableWidget" name="tableStock"/>
+        <widget class="QTableWidget" name="tableStock">
+         <column>
+          <property name="text">
+           <string>Cantidad</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Producto</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Marca</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Precio</string>
+          </property>
+         </column>
+        </widget>
        </item>
       </layout>
-      <zorder>tableStock</zorder>
-      <zorder>tableStock</zorder>
      </widget>
     </item>
    </layout>
@@ -245,6 +264,18 @@
    </property>
   </action>
  </widget>
+ <tabstops>
+  <tabstop>lineCodigo</tabstop>
+  <tabstop>pushConsultar</tabstop>
+  <tabstop>pushBorrar</tabstop>
+  <tabstop>comboBox</tabstop>
+  <tabstop>comboBox_2</tabstop>
+  <tabstop>comboBox_3</tabstop>
+  <tabstop>comboBox_4</tabstop>
+  <tabstop>comboBox_5</tabstop>
+  <tabstop>comboBox_6</tabstop>
+  <tabstop>tableStock</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

@@ -40,8 +40,8 @@ class MainWindow(QMainWindow):
         self.ui.actionMarcass.triggered.connect(self.Marca)
         self.ui.actionAcercaDe.triggered.connect(self.AcercaDe)
         self.ui.tableStock.setColumnCount(4)
-        header = ['Cantidad', 'Producto', 'Marca', 'Precio']
-        self.ui.tableStock.setHorizontalHeaderLabels(header)
+        # header = ['Cantidad', 'Producto', 'Marca', 'Precio']
+        # self.ui.tableStock.setHorizontalHeaderLabels(header)
         self.ui.tableStock.verticalHeader().setVisible(False)
 
     def consultaBD(self):
@@ -54,41 +54,22 @@ class MainWindow(QMainWindow):
         data = c.fetchall()
 
         self.ui.tableStock.setRowCount(len(data))
-        # self.ui.tableStock.setColumnCount(4)
-        # header = ['Cantidad', 'Producto', 'Marca', 'Precio']
-        # self.ui.tableStock.setHorizontalHeaderLabels(header)
+
         i = 0
         j = 0
         for i in range(len(data)):
             for j in range(4):
                 self.ui.tableStock.setItem(i, j, QTableWidgetItem(data[i][j]))
-                print(data[i][j])
+                # print(data[i][j])
                 j += 1
             i += 1
-
-        # tabla.setShowGrid(False)
-        # tabla.setShowGrid(True)
-
-        # hide vertical header
-        # vh = self.ui.tableStock.verticalHeader()
-        # vh.setVisible(False)
-        # vh.setVisible(True)
 
         # set horizontal header properties
         # hh = tabla.horizontalHeader()
         # hh.setStretchLastSection(True)
 
         # set column width to fit contents
-        # self.ui.tabla.resizeColumnsToContents()
-
-        # set row height
-        # self.ui.tabla.resizeRowsToContents()
-
-        # enable sorting
-        # tabla.setSortingEnabled(False)
-        # tabla.setSortingEnabled(True)
-
-        # return tabla
+        self.ui.tableStock.resizeColumnsToContents()
 
     def actualizarBD(precioAnterior, precioNuevo):
         """Funcion para actualizar elementos de la base de datos."""
@@ -216,9 +197,8 @@ try:
     conn.close()
 
 except Exception as e:
-    print(str(e))
-    error = int(time.time())
-    error = str(datetime.datetime.fromtimestamp(error).strftime
+    fechaError = int(time.time())
+    error = str(datetime.datetime.fromtimestamp(fechaError).strftime
                 ('%Y-%m-%d %H:%M:%S')) + " - " + str(e)
     saveFile = open("errorDB.txt", "a")
     saveFile.write(error)
